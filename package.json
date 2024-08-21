@@ -1,0 +1,17 @@
+{
+  "name": "ferris-wheel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chromadb": "^1.8.1",
+    "chromadb-default-embed": "^2.13.2",
+    "express": "^4.19.2",
+    "openai": "^4.56.0"
+  }
+}
