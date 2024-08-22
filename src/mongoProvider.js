@@ -1,15 +1,12 @@
 require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
-const uri = "mongodb://localhost:27017/minatoDB";
+const uri = "mongodb://127.0.0.1:27017/minatoDB";
 let client;
 
 const connectToDatabase = async () => {
     if (!client) {
-        client = new MongoClient(uri, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        client = new MongoClient(uri); // No need to pass the deprecated options
 
         try {
             await client.connect();
@@ -54,6 +51,5 @@ async function retrieveCortexConversations(clientUUID) {
         return [];
     }
 }
-
 
 module.exports = { submitCortexConversation, retrieveCortexConversations };

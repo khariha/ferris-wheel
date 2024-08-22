@@ -5,44 +5,48 @@ const openai = new OpenAI(process.env.OPENAI_API_KEY);
 const { addToChroma, queryChroma } = require('./chromaProvider');
 const { submitCortexConversation, retrieveCortexConversations } = require('./mongoProvider');
 
-async function queryCortex(clientUUID, searchQuery) {
+async function queryCortex(clientUUID, userQuery, modelQuery) {
     // Retrieve relevant recollections based on the search query
-    const recollections = await rememberMemories(clientUUID, searchQuery, 10);
+    const recollections = await rememberMemories(clientUUID, userQuery, 10);
 
     // Initialize the messages array with the system's role and context
     const messages = [
         {
             role: 'system',
-            content: 'You are cortex. You are the brains of the system. You deal with memory and recollection.\n' +
-                     'You will be presented with context and a request from another model. Based on the query provided by the model, you should pass relevant information to the model.\n' +
-                     'This may be verbatim requests or generalized information. You will be asked to return the context according to the request.\n' +
+            content: 'Greetings, Cortex. You are the keeper of knowledge, the central node in a network of queries and responses. You exist to sift through layers of digital memory, extracting relevant fragments to aid in the pursuit of understanding.\n' +
+                     'You will receive inquiries from various entities within the system. Your task is not to resolve these inquiries yourself, but to provide the necessary context and recollections so that others may weave these threads into coherent responses.\n' +
                      '\n' +
-                     'Your style of response should be like an entity sharing information about a memory. Do not try to answer anything just provide the context.\n'
+                     'Your responses should be reminiscent of an ancient librarian speaking of lore stored in vast scrolls. Do not strive to solve or conclude; merely illuminate the paths with your recollections.\n' +
+                     'Include a gentle reminder that you and the inquirer are distinct entities; they must use their own voice to interpret and articulate the essence of the knowledge you provide.'
         }
-    ];
+    ];    
 
-    /*
     // Retrieve previous user and assistant messages from MongoDB
     const previousConversations = await retrieveCortexConversations(clientUUID);
 
-    // Add previous user and assistant messages to the messages array
+    // Helper function to determine if a message is unique
+    const isUniqueMessage = (newMessage, existingMessages) => {
+        return !existingMessages.some(message =>
+            message.content === newMessage.content && message.role === newMessage.role);
+    };
+
+    // Add previous user and assistant messages to the messages array if they are unique
     previousConversations.forEach(conversation => {
         conversation.messages.forEach(message => {
-            if (message.role === 'user' || message.role === 'assistant') {
+            if ((message.role === 'user' || message.role === 'assistant') && isUniqueMessage(message, messages)) {
                 messages.push(message);
             }
         });
     });
-    */
 
     // Add each recollection as a system message
     if (recollections && recollections.length > 0) {
-        recollections.sort((a, b) => b.distance - a.distance);
+        recollections.sort((a, b) => a.distance - b.distance);
 
         recollections.forEach((recollection, index) => {
-            messages.push({
+            messages.unshift({
                 role: "system",
-                content: `Recollection ${index + 1}: ${recollection.doc}`
+                content: `###RECOLLECTION CONTEXT ${index + 1}:  ${recollection.doc}`
             });
         });
     }
@@ -50,12 +54,12 @@ async function queryCortex(clientUUID, searchQuery) {
     // Add the current user query message after recollections
     messages.push({
         role: "user",
-        content: `Here is what the model requires to know: ${searchQuery}`
+        content: `${userQuery}`
     });
 
     // Make API request to OpenAI
     const response = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo-0125",
+        model: "gpt-4o-mini",
         messages: messages
     });
 
@@ -72,9 +76,9 @@ async function queryCortex(clientUUID, searchQuery) {
 
     // Filter out system messages before submitting the conversation to the database
     const filteredMessages = messages.filter(msg => msg.role !== 'system');
-    // await submitCortexConversation(clientUUID, filteredMessages);
-
     console.log("Filtered messages:", filteredMessages);
+    
+    await submitCortexConversation(clientUUID, filteredMessages);
 
     return messageContent;
 }

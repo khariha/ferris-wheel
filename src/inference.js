@@ -60,7 +60,7 @@ async function askModel(clientUUID, userQuery) {
     try {
         while (loopCounter < 6) { // Limit to 6 loop backs
 
-            // console.log(messages);
+            console.log(messages);
 
             const response = await openai.chat.completions.create({
                 model: "gpt-4o",
@@ -77,6 +77,7 @@ async function askModel(clientUUID, userQuery) {
             loopCounter++; // Increment the loop counter
 
             if (result) {
+                console.log("Returning result: ", result);
                 return result; // Return the final result when ready
             }
 
@@ -140,12 +141,10 @@ async function memoryAbstraction(response, messages, clientUUID, userQuery, fina
 
                 // If the model suggests a function call to try_to_remember
                 const args = JSON.parse(toolCall.function.arguments);
-                const searchPhrase = `User query: ${userQuery}. Model query: ${args.memoryRequest}`;
-
-                // console.log("Search phrase: ", searchPhrase);
+                const modelQuery = args.memoryRequest;
 
                 // Logic to query cortex goes here
-                const recollection = await queryCortex(clientUUID, searchPhrase);
+                const recollection = await queryCortex(clientUUID, userQuery, modelQuery);
 
                 if (recollection) {
                     messages.unshift({

@@ -8435,3 +8435,603 @@ ValueError: Expected collection name that (1) contains 3-63 characters, (2) star
 [36mDEBUG[0m:    [21-08-2024 23:16:55] Stopping component OpenTelemetryClient
 [32mINFO[0m:     [21-08-2024 23:16:55] Application shutdown complete.
 [32mINFO[0m:     [21-08-2024 23:16:55] Finished server process [[36m479[0m]
+[33mWARNING[0m:  [22-08-2024 01:09:14] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:09:15] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:09:15] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:09:15] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:09:15] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:09:15] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:09:15] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:09:15] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:09:15] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:09:15] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:09:15] Started server process [[36m3231[0m]
+[32mINFO[0m:     [22-08-2024 01:09:15] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:09:15] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:09:15] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:11:00] Shutting down
+[32mINFO[0m:     [22-08-2024 01:11:00] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:11:00] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:11:00] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:11:00] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:11:00] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:11:00] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:11:00] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:11:00] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:11:00] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:11:00] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:11:00] Finished server process [[36m3231[0m]
+[33mWARNING[0m:  [22-08-2024 01:11:12] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:11:12] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:11:12] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:11:12] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:11:12] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:11:12] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:11:12] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:11:12] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:11:12] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:11:12] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:11:12] Started server process [[36m3989[0m]
+[32mINFO[0m:     [22-08-2024 01:11:12] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:11:12] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:11:12] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:11:19] Shutting down
+[32mINFO[0m:     [22-08-2024 01:11:19] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:11:19] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:11:19] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:11:19] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:11:19] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:11:19] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:11:19] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:11:19] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:11:19] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:11:19] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:11:19] Finished server process [[36m3989[0m]
+[33mWARNING[0m:  [22-08-2024 01:13:20] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:13:20] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:13:20] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:13:20] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:13:20] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:13:20] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:13:20] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:13:20] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:13:20] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:13:20] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:13:20] Started server process [[36m4198[0m]
+[32mINFO[0m:     [22-08-2024 01:13:20] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:13:20] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:13:20] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:13:42] Shutting down
+[32mINFO[0m:     [22-08-2024 01:13:42] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:13:42] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:13:42] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:13:42] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:13:42] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:13:42] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:13:42] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:13:42] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:13:42] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:13:42] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:13:42] Finished server process [[36m4198[0m]
+[33mWARNING[0m:  [22-08-2024 01:14:42] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:14:42] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:14:42] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:14:42] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:14:42] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:14:42] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:14:42] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:14:42] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:14:42] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:14:42] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:14:42] Started server process [[36m4414[0m]
+[32mINFO[0m:     [22-08-2024 01:14:42] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:14:42] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:14:42] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:14:50] ::1:53857 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:14:50] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [22-08-2024 01:14:50] ::1:53857 - "POST /api/v1/collections/ba009599-a0f6-4499-b5d2-4f1b590389d1/query HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:16:06] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:16:06] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:16:06] Started server process [[36m4637[0m]
+[32mINFO[0m:     [22-08-2024 01:16:06] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:16:06] Application startup complete.
+[31mERROR[0m:    [22-08-2024 01:16:06] [Errno 48] error while attempting to bind on address ('::1', 8000, 0, 0): address already in use
+[32mINFO[0m:     [22-08-2024 01:16:06] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:16:06] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:16:06] Application shutdown complete.
+[33mWARNING[0m:  [22-08-2024 01:16:43] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:16:43] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:16:43] Started server process [[36m4764[0m]
+[32mINFO[0m:     [22-08-2024 01:16:43] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:16:43] Application startup complete.
+[31mERROR[0m:    [22-08-2024 01:16:43] [Errno 48] error while attempting to bind on address ('::1', 8000, 0, 0): address already in use
+[32mINFO[0m:     [22-08-2024 01:16:43] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:16:43] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:16:43] Application shutdown complete.
+[33mWARNING[0m:  [22-08-2024 01:17:16] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:17:16] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:17:16] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:17:16] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:17:16] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:17:16] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:17:16] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:17:16] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:17:16] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:17:16] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:17:16] Started server process [[36m4872[0m]
+[32mINFO[0m:     [22-08-2024 01:17:16] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:17:16] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:17:16] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:17:26] ::1:53925 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:17:26] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [22-08-2024 01:17:26] ::1:53925 - "POST /api/v1/collections/ba009599-a0f6-4499-b5d2-4f1b590389d1/query HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:19:17] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:19:17] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:19:17] Started server process [[36m5097[0m]
+[32mINFO[0m:     [22-08-2024 01:19:17] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:19:17] Application startup complete.
+[31mERROR[0m:    [22-08-2024 01:19:17] [Errno 48] error while attempting to bind on address ('::1', 8000, 0, 0): address already in use
+[32mINFO[0m:     [22-08-2024 01:19:17] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:19:17] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:19:17] Application shutdown complete.
+[33mWARNING[0m:  [22-08-2024 01:19:43] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:19:43] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:19:43] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:19:43] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:19:43] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:19:43] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:19:43] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:19:43] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:19:43] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:19:43] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:19:43] Started server process [[36m5198[0m]
+[32mINFO[0m:     [22-08-2024 01:19:43] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:19:43] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:19:43] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:19:52] ::1:54006 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:19:52] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [22-08-2024 01:19:52] ::1:54006 - "POST /api/v1/collections/ba009599-a0f6-4499-b5d2-4f1b590389d1/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:19:54] ::1:54006 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:19:54] ::1:54006 - "POST /api/v1/collections/ba009599-a0f6-4499-b5d2-4f1b590389d1/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:19:56] ::1:54006 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:19:56] ::1:54006 - "POST /api/v1/collections/ba009599-a0f6-4499-b5d2-4f1b590389d1/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:19:58] ::1:54006 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:19:58] ::1:54006 - "POST /api/v1/collections/ba009599-a0f6-4499-b5d2-4f1b590389d1/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:22:16] ::1:54017 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:22:16] ::1:54017 - "POST /api/v1/collections/ba009599-a0f6-4499-b5d2-4f1b590389d1/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:22:17] ::1:54017 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:22:17] ::1:54017 - "POST /api/v1/collections/ba009599-a0f6-4499-b5d2-4f1b590389d1/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:22:37] Shutting down
+[32mINFO[0m:     [22-08-2024 01:22:37] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:22:37] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:22:37] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:22:37] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:22:37] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:22:37] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:22:37] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:22:37] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:22:37] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:22:37] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:22:37] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:22:37] Finished server process [[36m5198[0m]
+[33mWARNING[0m:  [22-08-2024 01:26:02] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:26:02] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:26:02] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:26:02] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:26:02] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:26:02] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:26:02] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:26:02] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:26:02] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:26:02] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:26:02] Started server process [[36m5739[0m]
+[32mINFO[0m:     [22-08-2024 01:26:02] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:26:02] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:26:02] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:26:05] ::1:54048 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:26:05] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [22-08-2024 01:26:05] ::1:54048 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:26:18] ::1:54052 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:26:18] ::1:54052 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:27:14] Shutting down
+[32mINFO[0m:     [22-08-2024 01:27:14] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:27:14] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:27:14] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:27:14] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:27:14] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:27:14] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:27:14] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:27:14] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:27:14] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:27:14] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:27:14] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:27:14] Finished server process [[36m5739[0m]
+[33mWARNING[0m:  [22-08-2024 01:27:16] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:27:17] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:27:17] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:27:17] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:27:17] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:27:17] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:27:17] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:27:17] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:27:17] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:27:17] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:27:17] Started server process [[36m5898[0m]
+[32mINFO[0m:     [22-08-2024 01:27:17] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:27:17] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:27:17] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:27:21] ::1:54062 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:27:22] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [22-08-2024 01:27:22] Number of requested results 10 is greater than number of elements in index 2, updating n_results = 2
+[32mINFO[0m:     [22-08-2024 01:27:22] ::1:54062 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:27:45] Shutting down
+[32mINFO[0m:     [22-08-2024 01:27:45] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:27:45] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:27:45] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:27:45] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:27:45] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:27:45] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:27:45] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:27:45] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:27:45] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:27:45] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:27:45] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:27:45] Finished server process [[36m5898[0m]
+[33mWARNING[0m:  [22-08-2024 01:27:48] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:27:48] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:27:48] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:27:48] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:27:48] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:27:48] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:27:48] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:27:48] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:27:48] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:27:48] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:27:48] Started server process [[36m6006[0m]
+[32mINFO[0m:     [22-08-2024 01:27:48] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:27:48] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:27:48] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:27:50] ::1:54070 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:27:50] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [22-08-2024 01:27:50] Number of requested results 10 is greater than number of elements in index 2, updating n_results = 2
+[32mINFO[0m:     [22-08-2024 01:27:50] ::1:54070 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:27:51] ::1:54070 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:27:52] Number of requested results 10 is greater than number of elements in index 2, updating n_results = 2
+[32mINFO[0m:     [22-08-2024 01:27:52] ::1:54070 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:27:53] ::1:54070 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:27:54] ::1:54070 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:28:50] Shutting down
+[32mINFO[0m:     [22-08-2024 01:28:50] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:28:50] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:28:50] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:28:50] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:28:50] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:28:50] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:28:50] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:28:50] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:28:50] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:28:50] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:28:50] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:28:50] Finished server process [[36m6006[0m]
+[33mWARNING[0m:  [22-08-2024 01:28:52] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:28:52] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:28:52] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:28:52] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:28:52] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:28:52] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:28:52] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:28:52] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:28:52] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:28:52] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:28:52] Started server process [[36m6186[0m]
+[32mINFO[0m:     [22-08-2024 01:28:52] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:28:52] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:28:52] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:29:08] ::1:54081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:29:08] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [22-08-2024 01:29:08] Number of requested results 10 is greater than number of elements in index 3, updating n_results = 3
+[32mINFO[0m:     [22-08-2024 01:29:08] ::1:54081 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:29:10] ::1:54081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:29:10] ::1:54081 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:29:46] ::1:54088 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:29:46] Number of requested results 10 is greater than number of elements in index 4, updating n_results = 4
+[32mINFO[0m:     [22-08-2024 01:29:46] ::1:54088 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:29:47] ::1:54088 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:29:48] ::1:54088 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:31:29] Shutting down
+[32mINFO[0m:     [22-08-2024 01:31:29] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:31:29] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:31:29] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:31:29] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:31:29] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:31:29] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:31:29] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:31:29] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:31:29] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:31:29] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:31:29] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:31:29] Finished server process [[36m6186[0m]
+[33mWARNING[0m:  [22-08-2024 01:31:31] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:31:31] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:31:31] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:31:31] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:31:31] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:31:31] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:31:31] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:31:31] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:31:31] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:31:31] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:31:31] Started server process [[36m6451[0m]
+[32mINFO[0m:     [22-08-2024 01:31:31] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:31:31] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:31:31] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:31:43] ::1:54106 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:31:43] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [22-08-2024 01:31:43] Number of requested results 10 is greater than number of elements in index 5, updating n_results = 5
+[32mINFO[0m:     [22-08-2024 01:31:43] ::1:54106 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:31:45] ::1:54106 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:31:45] ::1:54106 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:32:38] Shutting down
+[32mINFO[0m:     [22-08-2024 01:32:38] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:32:38] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:32:38] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:32:38] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:32:38] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:32:38] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:32:38] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:32:38] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:32:38] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:32:38] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:32:38] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:32:38] Finished server process [[36m6451[0m]
+[33mWARNING[0m:  [22-08-2024 01:32:41] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:32:41] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:32:41] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:32:41] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:32:41] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:32:41] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:32:41] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:32:41] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:32:41] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:32:41] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:32:41] Started server process [[36m6640[0m]
+[32mINFO[0m:     [22-08-2024 01:32:41] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:32:41] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:32:41] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:32:52] ::1:54114 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:32:52] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [22-08-2024 01:32:52] Number of requested results 10 is greater than number of elements in index 6, updating n_results = 6
+[32mINFO[0m:     [22-08-2024 01:32:52] ::1:54114 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:32:53] ::1:54114 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:32:54] ::1:54114 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:34:21] Shutting down
+[32mINFO[0m:     [22-08-2024 01:34:21] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:34:21] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:34:21] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:34:21] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:34:21] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:34:21] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:34:21] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:34:21] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:34:21] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:34:21] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:34:21] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:34:21] Finished server process [[36m6640[0m]
+[33mWARNING[0m:  [22-08-2024 01:34:24] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:34:24] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:34:24] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:34:24] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:34:24] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:34:24] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:34:24] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:34:24] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:34:24] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:34:24] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:34:24] Started server process [[36m6810[0m]
+[32mINFO[0m:     [22-08-2024 01:34:24] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:34:24] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:34:24] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:34:38] ::1:54143 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:34:38] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [22-08-2024 01:34:38] Number of requested results 10 is greater than number of elements in index 7, updating n_results = 7
+[32mINFO[0m:     [22-08-2024 01:34:38] ::1:54143 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:34:47] ::1:54147 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:34:47] ::1:54147 - "POST /api/v1/collections/540a7911-0bba-4df2-8599-90624216a2a2/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:38:15] Shutting down
+[32mINFO[0m:     [22-08-2024 01:38:15] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:38:15] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:38:15] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:38:15] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:38:15] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:38:15] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:38:15] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:38:15] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:38:15] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:38:15] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:38:15] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:38:15] Finished server process [[36m6810[0m]
+[33mWARNING[0m:  [22-08-2024 01:39:30] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:39:30] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:39:30] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:39:30] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:39:30] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:39:30] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:39:30] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:39:30] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:39:30] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:39:30] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:39:30] Started server process [[36m7231[0m]
+[32mINFO[0m:     [22-08-2024 01:39:30] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:39:30] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:39:30] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:39:56] ::1:54209 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:39:57] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [22-08-2024 01:39:57] ::1:54209 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:40:16] ::1:54218 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:40:17] ::1:54218 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:41:14] ::1:54221 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:41:14] Number of requested results 10 is greater than number of elements in index 2, updating n_results = 2
+[32mINFO[0m:     [22-08-2024 01:41:14] ::1:54221 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:41:16] ::1:54221 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:41:16] Number of requested results 10 is greater than number of elements in index 2, updating n_results = 2
+[32mINFO[0m:     [22-08-2024 01:41:16] ::1:54221 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:41:20] ::1:54221 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:41:20] ::1:54221 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:43:16] ::1:54228 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:43:17] Number of requested results 10 is greater than number of elements in index 3, updating n_results = 3
+[32mINFO[0m:     [22-08-2024 01:43:17] ::1:54228 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:43:19] ::1:54228 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:43:19] Number of requested results 10 is greater than number of elements in index 3, updating n_results = 3
+[32mINFO[0m:     [22-08-2024 01:43:19] ::1:54228 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:43:24] ::1:54230 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:43:25] ::1:54230 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:45:08] ::1:54235 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:45:08] Number of requested results 10 is greater than number of elements in index 4, updating n_results = 4
+[32mINFO[0m:     [22-08-2024 01:45:08] ::1:54235 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:45:14] ::1:54239 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:45:14] ::1:54239 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:46:21] ::1:54242 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:46:21] Number of requested results 10 is greater than number of elements in index 5, updating n_results = 5
+[32mINFO[0m:     [22-08-2024 01:46:21] ::1:54242 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:46:24] ::1:54242 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:46:24] ::1:54242 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:47:09] Shutting down
+[32mINFO[0m:     [22-08-2024 01:47:09] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:47:09] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:47:09] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:47:09] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:47:09] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:47:09] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:47:09] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:47:09] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:47:09] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:47:09] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:47:09] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:47:09] Finished server process [[36m7231[0m]
+[33mWARNING[0m:  [22-08-2024 01:47:43] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:47:43] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:47:43] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:47:43] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:47:43] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:47:43] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:47:43] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:47:43] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:47:43] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:47:43] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:47:43] Started server process [[36m7899[0m]
+[32mINFO[0m:     [22-08-2024 01:47:43] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:47:43] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:47:43] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:47:59] ::1:54256 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:47:59] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [22-08-2024 01:47:59] Number of requested results 10 is greater than number of elements in index 6, updating n_results = 6
+[32mINFO[0m:     [22-08-2024 01:47:59] ::1:54256 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:48:01] ::1:54256 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:48:01] Number of requested results 10 is greater than number of elements in index 6, updating n_results = 6
+[32mINFO[0m:     [22-08-2024 01:48:01] ::1:54256 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:48:03] ::1:54256 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:48:03] ::1:54256 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:49:26] ::1:54263 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:49:26] Number of requested results 10 is greater than number of elements in index 7, updating n_results = 7
+[32mINFO[0m:     [22-08-2024 01:49:26] ::1:54263 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:49:35] ::1:54277 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:49:35] ::1:54277 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:52:00] ::1:54289 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:52:00] Number of requested results 10 is greater than number of elements in index 8, updating n_results = 8
+[32mINFO[0m:     [22-08-2024 01:52:00] ::1:54289 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:52:03] ::1:54289 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [22-08-2024 01:52:03] Number of requested results 10 is greater than number of elements in index 8, updating n_results = 8
+[32mINFO[0m:     [22-08-2024 01:52:03] ::1:54289 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:52:08] ::1:54289 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:52:08] ::1:54289 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 01:52:55] Shutting down
+[32mINFO[0m:     [22-08-2024 01:52:56] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 01:52:56] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 01:52:56] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 01:52:56] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 01:52:56] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:52:56] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:52:56] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:52:56] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:52:56] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:52:56] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 01:52:56] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 01:52:56] Finished server process [[36m7899[0m]
+[33mWARNING[0m:  [22-08-2024 01:53:01] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [22-08-2024 01:53:01] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [22-08-2024 01:53:01] Starting component System
+[36mDEBUG[0m:    [22-08-2024 01:53:01] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [22-08-2024 01:53:01] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 01:53:01] Starting component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 01:53:01] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 01:53:01] Starting component Posthog
+[36mDEBUG[0m:    [22-08-2024 01:53:01] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 01:53:01] Starting component SegmentAPI
+[32mINFO[0m:     [22-08-2024 01:53:01] Started server process [[36m8384[0m]
+[32mINFO[0m:     [22-08-2024 01:53:01] Waiting for application startup.
+[32mINFO[0m:     [22-08-2024 01:53:01] Application startup complete.
+[32mINFO[0m:     [22-08-2024 01:53:01] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [22-08-2024 01:53:19] ::1:54305 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [22-08-2024 01:53:19] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [22-08-2024 01:53:19] Number of requested results 10 is greater than number of elements in index 9, updating n_results = 9
+[32mINFO[0m:     [22-08-2024 01:53:20] ::1:54305 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/query HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:53:27] ::1:54309 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [22-08-2024 01:53:27] ::1:54309 - "POST /api/v1/collections/b0992223-95f9-4068-854d-a450e32367af/add HTTP/1.1" 201
+[32mINFO[0m:     [22-08-2024 02:25:30] Shutting down
+[32mINFO[0m:     [22-08-2024 02:25:30] Waiting for application shutdown.
+[36mDEBUG[0m:    [22-08-2024 02:25:30] Stopping component System
+[36mDEBUG[0m:    [22-08-2024 02:25:30] Stopping component SegmentAPI
+[36mDEBUG[0m:    [22-08-2024 02:25:30] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [22-08-2024 02:25:30] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [22-08-2024 02:25:30] Stopping component Posthog
+[36mDEBUG[0m:    [22-08-2024 02:25:30] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [22-08-2024 02:25:30] Stopping component SqliteDB
+[36mDEBUG[0m:    [22-08-2024 02:25:30] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [22-08-2024 02:25:30] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [22-08-2024 02:25:30] Application shutdown complete.
+[32mINFO[0m:     [22-08-2024 02:25:30] Finished server process [[36m8384[0m]
