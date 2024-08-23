@@ -22,7 +22,7 @@ const connectToDatabase = async () => {
 
 async function submitCortexConversation(clientUUID, messages) {
     const db = await connectToDatabase();
-    const collection = db.collection('cortexConversations'); // Use or create a collection named 'cortexConversations'
+    const collection = db.collection(`${clientUUID}_cortexConversations`); // Use or create a collection named 'cortexConversations'
 
     const conversationDocument = {
         clientUUID: clientUUID, // Tag the conversation with the client UUID
@@ -40,7 +40,7 @@ async function submitCortexConversation(clientUUID, messages) {
 
 async function retrieveCortexConversations(clientUUID) {
     const db = await connectToDatabase();
-    const collection = db.collection('cortexConversations');
+    const collection = db.collection(`${clientUUID}_cortexConversations`);
 
     try {
         const conversations = await collection.find({ clientUUID }).toArray();

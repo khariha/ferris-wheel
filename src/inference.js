@@ -3,6 +3,7 @@ const { OpenAI } = require('openai');
 const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 const { addMemoryToCortex, queryCortex } = require('./cortex');
+const { queryEventsAgent } = require('./agents/eventsAgent.js');
 
 async function askModel(clientUUID, userQuery) {
     let messages = [];
@@ -25,6 +26,24 @@ async function askModel(clientUUID, userQuery) {
                         }
                     },
                     "required": ["memoryRequest"],
+                    "additionalProperties": false
+                },
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "query_events_agent",
+                "description": "Use this function to query the events agent for information about upcoming events on the user's calender. You can ask the events agent to get, create, read, update, or delete events. The events agent will respond with the relevant information based on the query.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "eventsRequest": {
+                            "type": "string",
+                            "description": "Use natural language to describe what you'd like the events agent to do. For example, 'Get my events for tomorrow' or 'Create a new event for next week'. Base your request on what the user asks of you.",
+                        }
+                    },
+                    "required": ["eventsRequest"],
                     "additionalProperties": false
                 },
             }
@@ -60,7 +79,7 @@ async function askModel(clientUUID, userQuery) {
     try {
         while (loopCounter < 6) { // Limit to 6 loop backs
 
-            console.log(messages);
+            console.log("Inference agent logs: ", messages);
 
             const response = await openai.chat.completions.create({
                 model: "gpt-4o",
@@ -174,6 +193,42 @@ async function memoryAbstraction(response, messages, clientUUID, userQuery, fina
                 }               
 
                 return { result: null, finalizedResponse: finalResponse };
+
+            case 'query_events_agent':
+                
+                const argsEventsRequest = JSON.parse(toolCall.function.arguments);
+                const eventsModelQuery = argsEventsRequest.eventsRequest;
+
+                const eventsAgentResponse = await queryEventsAgent(clientUUID, eventsModelQuery);
+                console.log("Events agent response: ", eventsAgentResponse);
+
+                if (eventsAgentResponse) {
+                    messages.unshift({
+                        role: "system",
+                        content: `###EVENTS AGENT RESPONSE: ${eventsAgentResponse}`
+                    });
+                }
+
+                const eventsQueryCompletion = {
+                    role: "system",
+                    content: `###INSTRUCTION: If you are seeing this message that means the events agent has successfully completed your query. Return an assistant response immediately.`
+                };
+
+                // Find and replace the existing message if it exists
+                const eventsQueryCompletionIndex = messages.findIndex(
+                    message => message.role === "system" && message.content.includes("If you are seeing this message that means you've successfully retrieved a memory.")
+                );
+                
+                if (eventsQueryCompletionIndex !== -1) {
+                    // Replace the existing message with the updated one
+                    messages[eventsQueryCompletionIndex] = eventsQueryCompletion;
+                } else {
+                    // Otherwise, add the new message
+                    messages.push(eventsQueryCompletion);
+                }               
+
+                return { result: null, finalizedResponse: finalResponse };
+
 
             case 'suspend_thread':
                 // If the model suggests a function call to suspend_thread
