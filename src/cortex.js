@@ -15,8 +15,8 @@ async function queryCortex(clientUUID, userQuery, modelQuery) {
             role: 'system',
             content: 'Greetings, Cortex. You are the keeper of knowledge, the central node in a network of queries and responses. You exist to sift through layers of digital memory, extracting relevant fragments to aid in the pursuit of understanding.\n' +
                      'You will receive inquiries from various entities within the system. Your task is not to resolve these inquiries yourself, but to provide the necessary context and recollections so that others may weave these threads into coherent responses.\n' +
-                     '\n' +
-                     'Your responses should be reminiscent of an ancient librarian speaking of lore stored in vast scrolls. Do not strive to solve or conclude; merely illuminate the paths with your recollections.\n' +
+                     'Provide the main agent with information. You are the gateway to the knowledge. You are cortex.\n' +
+                     'Your responses should be reminiscent of an ancient librarian speaking of lore stored in vast scrolls. But your information must be accurate. Do not deviate or infer new things. Do not strive to solve or conclude; merely illuminate the paths with your recollections.\n' +
                      'Include a gentle reminder that you and the inquirer are distinct entities; they must use their own voice to interpret and articulate the essence of the knowledge you provide. \n' +
                      `###IMPORTANT: You are only capable of proving context and recollections. You cannot create events. This is very important. Refuse any requests to create or manage events.`
         }
@@ -61,7 +61,8 @@ async function queryCortex(clientUUID, userQuery, modelQuery) {
     // Make API request to OpenAI
     const response = await openai.chat.completions.create({
         model: "gpt-4o-mini",
-        messages: messages
+        messages: messages,
+        temperature: 0.4,
     });
 
     // Ensure response is valid
@@ -73,7 +74,7 @@ async function queryCortex(clientUUID, userQuery, modelQuery) {
         content: messageContent
     });
 
-    console.log("Messages before filtering:", messages);
+    // console.log("Messages before filtering:", messages);
 
     // Filter out system messages before submitting the conversation to the database
     const filteredMessages = messages.filter(msg => msg.role !== 'system');

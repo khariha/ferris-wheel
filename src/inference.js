@@ -4,6 +4,7 @@ const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 const { addMemoryToCortex, queryCortex } = require('./cortex');
 const { queryEventsAgent } = require('./agents/eventsAgent.js');
+const { inferChainOfThought } = require('./agents/CoTAgent.js');
 
 async function askModel(clientUUID, userQuery) {
     let messages = [];
@@ -52,7 +53,7 @@ async function askModel(clientUUID, userQuery) {
             "type": "function",
             "function": {
                 "name": "suspend_thread",
-                "description": "Use this function when you'd like to suspend the current thread of conversation. You are effectively ending the conversation with the user. This is usually an option after you've provided a non-function response to the user and the thread is returned to you.",
+                "description": "Use this function when you'd like to suspend the current thread of conversation. You are effectively ending the conversation with the user. This is usually an option after you've provided a non-function response to the user and the thread is returned to you. It is very important for you to respond with a assistant message before calling this function.",
                 "parameters": {
                     "type": "object",
                     "properties": {
@@ -68,6 +69,15 @@ async function askModel(clientUUID, userQuery) {
         }
     ];
 
+    const chainOfThought = await inferChainOfThought(userQuery);
+
+    messages.push(
+        {
+            role: "system",
+            content: `Follow this chain of thought carefully. Consider if you've already completed parts of this instruction set before proceeding. Check your logs to make sure: ${chainOfThought}`
+        }
+    );
+
     // Add the current user query to the messages array
     messages.push(
         {
@@ -77,13 +87,14 @@ async function askModel(clientUUID, userQuery) {
     );
 
     try {
-        while (loopCounter < 6) { // Limit to 6 loop backs
+        while (loopCounter <= 6) { // Limit to 12 loop backs
 
             console.log("Inference agent logs: ", messages);
 
             const response = await openai.chat.completions.create({
                 model: "gpt-4o",
                 messages: messages,
+                temperature: 0.4,
                 tools: tools,
                 tool_choice: "auto"
             });
@@ -96,7 +107,7 @@ async function askModel(clientUUID, userQuery) {
             loopCounter++; // Increment the loop counter
 
             if (result) {
-                console.log("Returning result: ", result);
+                // console.log("Returning result: ", result);
                 return result; // Return the final result when ready
             }
 
@@ -168,7 +179,7 @@ async function memoryAbstraction(response, messages, clientUUID, userQuery, fina
                 if (recollection) {
                     messages.unshift({
                         role: "system",
-                        content: `###CONTEXT: ${recollection}`
+                        content: `###CORTEX CONTEXT RESPONSE: ${recollection}`
                     });
                 }
 
@@ -176,7 +187,7 @@ async function memoryAbstraction(response, messages, clientUUID, userQuery, fina
 
                 const avoidRememberRecall = {
                     role: "system",
-                    content: `###INSTRUCTION: If you are seeing this message that means you've successfully retrieved a memory. Do not call the 'try_to_remember' function again unless instructed. You've called on 'try_to_remember' ${loopCounter} times already. You are limited to calling it 3 times. Return an assistant response immediately.`
+                    content: `###INSTRUCTION: If you are seeing this message that means you've successfully retrieved a memory. Do not call the 'try_to_remember' function again unless instructed. You've called on 'try_to_remember' ${loopCounter} times already. You are limited to calling it 3 times. Return an assistant response immediately. If there is a next step, take the necessary course of action.`
                 };
 
                 // Find and replace the existing message if it exists
@@ -203,7 +214,7 @@ async function memoryAbstraction(response, messages, clientUUID, userQuery, fina
                 console.log("Events agent response: ", eventsAgentResponse);
 
                 if (eventsAgentResponse) {
-                    messages.unshift({
+                    messages.push({
                         role: "system",
                         content: `###EVENTS AGENT RESPONSE: ${eventsAgentResponse}`
                     });
@@ -211,12 +222,12 @@ async function memoryAbstraction(response, messages, clientUUID, userQuery, fina
 
                 const eventsQueryCompletion = {
                     role: "system",
-                    content: `###INSTRUCTION: If you are seeing this message that means the events agent has successfully completed your query. Return an assistant response immediately.`
+                    content: `###INSTRUCTION: If you are seeing this message that means the events agent has successfully completed your query. Return an assistant response immediately. If there is a next step, take the necessary course of action. Review your logs for the next step if necessary.`
                 };
 
                 // Find and replace the existing message if it exists
                 const eventsQueryCompletionIndex = messages.findIndex(
-                    message => message.role === "system" && message.content.includes("If you are seeing this message that means you've successfully retrieved a memory.")
+                    message => message.role === "system" && message.content.includes("If you are seeing this message that means the events agent has successfully completed your query.")
                 );
                 
                 if (eventsQueryCompletionIndex !== -1) {

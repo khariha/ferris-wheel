@@ -2,7 +2,7 @@ const { OpenAI } = require('openai');
 
 const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
-const { createEventObject, getEvents, createEvent } = require('../agent-services/eventsService');
+const { createEventObject, getEvents, createEvent, updateEvent, deleteEvent } = require('../agent-services/eventsService');
 
 async function queryEventsAgent(clientUUID, modelQuery) {
 
@@ -33,7 +33,7 @@ async function queryEventsAgent(clientUUID, modelQuery) {
                 "parameters": {
                     "type": "object",
                     "properties": {
-                        "clientUUID": {
+                        "add_clientUUID": {
                             "type": "string",
                             "description": "The unique identifier for the client to whom the event belongs.",
                         },
@@ -102,7 +102,7 @@ async function queryEventsAgent(clientUUID, modelQuery) {
                             "description": "Indicates if the event is an all-day event. If true, start_time and end_time can be omitted."
                         },
                     },
-                    "required": ["clientUUID", "title", "date"],
+                    "required": ["add_clientUUID", "title", "date"],
                     "additionalProperties": false
                 },
             }
@@ -115,11 +115,11 @@ async function queryEventsAgent(clientUUID, modelQuery) {
                 "parameters": {
                     "type": "object",
                     "properties": {
-                        "clientUUID": {
+                        "update_clientUUID": {
                             "type": "string",
                             "description": "The unique identifier for the client to whom the event belongs.",
                         },
-                        "uuid": {
+                        "update_uuid": {
                             "type": "string",
                             "description": "The unique identifier of the event to be updated.",
                         },
@@ -191,7 +191,7 @@ async function queryEventsAgent(clientUUID, modelQuery) {
                             "additionalProperties": false
                         },
                     },
-                    "required": ["clientUUID", "uuid", "updateFields"],
+                    "required": ["update_clientUUID", "update_uuid", "updateFields"],
                     "additionalProperties": false
                 },
             }
@@ -204,16 +204,16 @@ async function queryEventsAgent(clientUUID, modelQuery) {
                 "parameters": {
                     "type": "object",
                     "properties": {
-                        "clientUUID": {
+                        "delete_clientUUID": {
                             "type": "string",
                             "description": "The unique identifier for the client to whom the event belongs.",
                         },
-                        "uuid": {
+                        "delete_uuid": {
                             "type": "string",
                             "description": "The unique identifier of the event to be deleted.",
                         },
                     },
-                    "required": ["clientUUID", "uuid"],
+                    "required": ["delete_clientUUID", "delete_uuid"],
                     "additionalProperties": false
                 },
             }
@@ -271,7 +271,7 @@ async function queryEventsAgent(clientUUID, modelQuery) {
     );
 
     try {
-        while (loopCounter <= 6) { // Limit to 6 loop backs
+        while (loopCounter <= 3) { // Limit to 6 loop backs
 
             console.log("Events agent logs: ", messages);
 
@@ -290,7 +290,7 @@ async function queryEventsAgent(clientUUID, modelQuery) {
             loopCounter++; // Increment the loop counter
 
             if (result) {
-                console.log("Returning result: ", result);
+                // console.log("Returning result: ", result);
                 return result;
             }
 
@@ -311,7 +311,7 @@ async function eventsAbstraction(response, messages, finalResponse, loopCounter)
     if (response.choices[0].finish_reason === 'stop') {
 
         const messageContent = response.choices[0].message.content;
-        console.log("Non-function response:", messageContent);
+        // console.log("Non-function response:", messageContent);
 
         messages.push({
             role: "assistant",
@@ -351,7 +351,7 @@ async function eventsAbstraction(response, messages, finalResponse, loopCounter)
                 const argsForGet = JSON.parse(toolCall.function.arguments);
 
                 const eventsForClient = await getEvents(argsForGet.clientUUID);
-                console.log("Events for client:", eventsForClient);
+                // console.log("Events for client:", eventsForClient);
 
                 if (eventsForClient.length === 0) {
                     // If no events are found, push a message indicating this
@@ -400,7 +400,7 @@ async function eventsAbstraction(response, messages, finalResponse, loopCounter)
 
             case "add_client_event":
 
-                const { clientUUID, title, date, start_time, end_time, location, description, collaborators, reminders, all_day } = JSON.parse(toolCall.function.arguments);
+                const { add_clientUUID, title, date, start_time, end_time, location, description, collaborators, reminders, all_day } = JSON.parse(toolCall.function.arguments);
 
                 const newEvent = createEventObject({
                     title,
@@ -414,11 +414,11 @@ async function eventsAbstraction(response, messages, finalResponse, loopCounter)
                     all_day
                 });
 
-                await createEvent(clientUUID, newEvent);
+                await createEvent(add_clientUUID, newEvent);
 
                 const addEventConfirmation = {
                     role: "system",
-                    content: `###INSTRUCTION: Successfully created a new event for client ${clientUUID}.\n\n` +
+                    content: `###INSTRUCTION: Successfully created a new event for client ${add_clientUUID}.\n\n` +
                         `**Event Details:**\n` +
                         `- **Title**: ${newEvent.title}\n` +
                         `- **Date**: ${newEvent.date}\n` +
@@ -449,13 +449,35 @@ async function eventsAbstraction(response, messages, finalResponse, loopCounter)
 
             case "update_client_event":
 
+                const updateArgs = JSON.parse(toolCall.function.arguments);
+                const { update_clientUUID, update_uuid, updateFields } = updateArgs;
 
-                break;
+                await updateEvent(update_clientUUID, update_uuid, updateFields);
+
+                const updateConfirmation = {
+                    role: "system",
+                    content: `###INSTRUCTION: Successfully updated the event with UUID ${update_uuid} for client ${update_clientUUID}. Updated fields: ${Object.keys(updateFields).join(', ')}. Do not call the 'update_client_event' function again unless instructed. Return an assistant response confirming your action for the user.`
+                };
+            
+                messages.push(updateConfirmation);
+            
+                return { result: null, finalizedResponse: finalResponse };
 
             case "delete_client_event":
 
+                const deleteArgs = JSON.parse(toolCall.function.arguments);
+                const { delete_clientUUID, delete_uuid } = deleteArgs;
 
-                break;
+                await deleteEvent(delete_clientUUID, delete_uuid);
+
+                const deleteConfirmation = {
+                    role: "system",
+                    content: `###INSTRUCTION: Successfully deleted the event with UUID ${delete_uuid} for client ${delete_clientUUID}. Do not call the 'delete_client_event' function again unless instructed. Return an assistant response confirming your action for the user.`
+                };
+            
+                messages.push(deleteConfirmation);
+
+                return { result: null, finalizedResponse: finalResponse };
 
             case "suspend_thread":
 
@@ -472,85 +494,3 @@ async function eventsAbstraction(response, messages, finalResponse, loopCounter)
 }
 
 module.exports = { queryEventsAgent };
-
-/*
-const events = [
-    createEventObject({
-        title: "Project Kickoff Meeting",
-        date: "2024-08-24",
-        start_time: "10:00",
-        end_time: "11:00",
-        location: "Conference Room 1A",
-        description: "Initial meeting to discuss project scope and objectives.",
-        collaborators: [
-            { name: "John Doe" },
-            { name: "Jane Smith" },
-            { name: "Alice Johnson" }
-        ],
-        reminders: [
-            { time_before: "15m", method: "popup" },
-            { time_before: "1d", method: "email" }
-        ]
-    }),
-    createEventObject({
-        title: "Lunch with Client",
-        date: "2024-08-25",
-        start_time: "12:30",
-        end_time: "14:00",
-        location: "Downtown Bistro",
-        description: "Casual lunch meeting with potential new client.",
-        collaborators: [
-            { name: "Mark Wilson" }
-        ],
-        reminders: [
-            { time_before: "30m", method: "popup" },
-            { time_before: "2h", method: "email" }
-        ]
-    }),
-    createEventObject({
-        title: "Team Building Workshop",
-        date: "2024-08-27",
-        start_time: "09:00",
-        end_time: "17:00",
-        location: "Offsite Location",
-        description: "Full-day team building activities and workshops.",
-        collaborators: [
-            { name: "Allison Green" },
-            { name: "Bob Smith" },
-            { name: "Charlie Davis" }
-        ],
-        reminders: [
-            { time_before: "1d", method: "email" }
-        ]
-    }),
-    createEventObject({
-        title: "Quarterly Financial Review",
-        date: "2024-08-29",
-        start_time: "14:00",
-        end_time: "16:00",
-        location: "Virtual - Microsoft Teams",
-        description: "Review of the financial performance for Q3.",
-        collaborators: [
-            { name: "Finance Team" },
-            { name: "CEO" },
-            { name: "CFO" }
-        ],
-        reminders: [
-            { time_before: "1h", method: "popup" },
-            { time_before: "1d", method: "email" }
-        ]
-    }),
-    createEventObject({
-        title: "Annual Company Picnic",
-        date: "2024-09-02",
-        all_day: true,
-        location: "Central Park",
-        description: "All-day company picnic with food, games, and team activities.",
-        reminders: [
-            { time_before: "2d", method: "email" }
-        ]
-    })
-];
-
-// queryEventsAgent('3db9bed5-7f42-4720-9071-41ff2cb5d663', 'Make a meeting for me and Rick Sanchez tomorrow at 2pm.');
-*/
